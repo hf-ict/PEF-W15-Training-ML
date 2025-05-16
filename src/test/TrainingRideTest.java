@@ -16,7 +16,7 @@ class TrainingRideTest {
     }
 
     @Test
-    void testTrainingsfahrt() {
+    void testTrainingRide() {
         ride = new TrainingRide(-0.001, 0); //-1m, 0h
         assertEquals(0, ride.getDuration());
         assertEquals(0, ride.getDistance());
@@ -31,17 +31,17 @@ class TrainingRideTest {
     }
 
     @Test
-    void testGetStrecke() {
+    void testGetDistance() {
         assertEquals(60, ride.getDistance());
     }
 
     @Test
-    void testGetDauer() {
+    void testGetDuration() {
         assertEquals(2, ride.getDuration());
     }
 
     @Test
-    void testAddEtappe() {
+    void testAddStage() {
         this.ride.addStage(null);
         assertEquals(60, ride.getDistance());
         assertEquals(2, ride.getDuration());
@@ -58,7 +58,7 @@ class TrainingRideTest {
     }
 
     @Test
-    void testGetDurchschnittsgeschwindigkeit() {
+    void testGetAverageSpeed() {
         assertEquals(30, ride.getAverageSpeed(), 0.00001);
         TrainingRide ride2 = new TrainingRide(30, 0);
 		assertEquals(0, ride2.getAverageSpeed(), 0.00001);
